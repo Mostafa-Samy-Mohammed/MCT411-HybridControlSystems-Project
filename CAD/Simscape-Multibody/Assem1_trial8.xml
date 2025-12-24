@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="12/21/25||15:25:58" using="Simscape Multibody Link Version 7.4" from="SolidWorks 32.1.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Assem1" uid="Assem1" version="427">
+<AssemblyFile name="Assem1.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="base_plate-1" uid="base_plate-1" grounded="true" entityUid="base_plate*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Flexible_coupler_motor-1" uid="Flexible_coupler_motor-1" entityUid="Flexible_coupler_motor*:*Default">
+<Transform>
+<Rotation>0 1.2490009027033011e-16 1 -1 1.8437686435023849e-16 0 -1.8437686435023852e-16 -1 1.2490009027033011e-16</Rotation>
+<Translation>0 0.10300000000000002 0</Translation>
+</Transform>
+</Instance>
+<Instance name="dcMotor_plate-1" uid="dcMotor_plate-1" entityUid="dcMotor_plate*:*Default">
+<Transform>
+<Rotation>-0.99999951054052638 0 -0.00098940320783919011 0 1 0 0.00098940320783919011 0 -0.99999951054052638</Rotation>
+<Translation>0 0.076000000000000012 0</Translation>
+</Transform>
+</Instance>
+<Instance name="arm_v2-1" uid="arm_v2-1" entityUid="arm_v2*:*Default">
+<Transform>
+<Rotation>-1 0 1.2490009027033011e-16 0 1 1.843768643502383e-16 -1.2490009027033011e-16 1.8437686435023832e-16 -1</Rotation>
+<Translation>0 0.12100000000000008 0</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.69999999999999996" g="0.69999999999999996" b="0.69999999999999996" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Rigid_coupler_pendulum-1" uid="Rigid_coupler_pendulum-1" entityUid="Rigid_coupler_pendulum*:*Default">
+<Transform>
+<Rotation>-1 0 2.6367796834811984e-16 0 1 1.6653345369377338e-16 -2.6367796834811979e-16 1.6653345369377341e-16 -1</Rotation>
+<Translation>0.083999999999999728 0.15384840567063038 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Pendulum-1" uid="Pendulum-1" entityUid="Pendulum*:*Default">
+<Transform>
+<Rotation>-2.9689027090163195e-16 -3.021419635641394e-16 -0.99999999999999967 -6.9944050551384862e-15 1 -3.0214196356413752e-16 1 6.9944050551384862e-15 -2.9689027090163481e-16</Rotation>
+<Translation>0.099999999999999728 0.15384840567063043 0</Translation>
+</Transform>
+</Instance>
+<Instance name="orange_encoder_600ppr v1-1" uid="orange_encoder_600ppr v1-1" entityUid="orange_encoder_600ppr v1*:*Default">
+<Transform>
+<Rotation>0 1.3877787807814457e-16 1 -0.99947610028152378 0.032365490356815518 0 -0.032365490356815518 -0.99947610028152412 1.3877787807814457e-16</Rotation>
+<Translation>0.018999999999999975 0.15384840567063035 0</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric17">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>base_plate-1</Uid>
+</InstancePath>
+<Position>0.031788306961597033 0.0060000000000000001 -0.031851272196178462</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>dcMotor_plate-1</Uid>
+</InstancePath>
+<Position>-0.031819805153395511 0.0030000000000000027 0.031819805153393763</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance10">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_plate-1</Uid>
+</InstancePath>
+<Position>-0.056568542494923033 0.0060000000000000001 -0.019999999999999605</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>dcMotor_plate-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric16">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>base_plate-1</Uid>
+</InstancePath>
+<Position>0 0.0060000000000000001 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>dcMotor_plate-1</Uid>
+</InstancePath>
+<Position>0 0.0030000000000000027 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric20">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>dcMotor_plate-1</Uid>
+</InstancePath>
+<Position>0 0.0030000000000000027 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Flexible_coupler_motor-1</Uid>
+</InstancePath>
+<Position>-0.0079999999999999932 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance11">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Flexible_coupler_motor-1</Uid>
+</InstancePath>
+<Position>0.022000000000000006 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>dcMotor_plate-1</Uid>
+</InstancePath>
+<Position>0 0.0030000000000000027 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric10">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Flexible_coupler_motor-1</Uid>
+</InstancePath>
+<Position>-0.0079999999999999932 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>0 -0.020000000000000004 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Parallel name="Parallel2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Flexible_coupler_motor-1</Uid>
+</InstancePath>
+<Position>-0.018700000000000008 0.00050000000000000001 0.0043970411611027353</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>0 0.0060000000000000053 -0.021999999999999999</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Distance name="Distance6">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Flexible_coupler_motor-1</Uid>
+</InstancePath>
+<Position>-0.0079999999999999932 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric8">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>orange_encoder_600ppr v1-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>-0.053999999999999999 0.032848405670630326 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident8">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>orange_encoder_600ppr v1-1</Uid>
+</InstancePath>
+<Position>0 0 0.035000000000000003</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>-0.053999999999999999 0.032848405670630326 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident9">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>-0.054000000000000006 0.04784840567063034 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>orange_encoder_600ppr v1-1</Uid>
+</InstancePath>
+<Position>-0.014999999999999986 -0.0012644999999999965 0.035000000000000003</Position>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric26">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>-0.053999999999999999 0.032848405670630326 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Rigid_coupler_pendulum-1</Uid>
+</InstancePath>
+<Position>-0.0079999999999999932 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance12">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>arm_v2-1</Uid>
+</InstancePath>
+<Position>-0.060000000000000012 0.0059999999999999776 -0.021999999999999999</Position>
+<Axis>-1 0 1.5770213417970973e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rigid_coupler_pendulum-1</Uid>
+</InstancePath>
+<Position>0.021999999999999999 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Pendulum-1</Uid>
+</InstancePath>
+<Position>0 0 0.017999999999999988</Position>
+<Axis>0 0 -0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Rigid_coupler_pendulum-1</Uid>
+</InstancePath>
+<Position>-0.0079999999999999932 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Parallel name="Parallel15">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rigid_coupler_pendulum-1</Uid>
+</InstancePath>
+<Position>-0.018700000000000008 -0.00050000000000000044 0.0043970411611027344</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Pendulum-1</Uid>
+</InstancePath>
+<Position>5.6561997689258757e-16 -0.081000000000000003 0</Position>
+<Axis>6.9829626776862667e-15 -1 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Distance name="Distance4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Pendulum-1</Uid>
+</InstancePath>
+<Position>0 0 0.017999999999999988</Position>
+<Axis>0 0 0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rigid_coupler_pendulum-1</Uid>
+</InstancePath>
+<Position>-0.0079999999999999932 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="Flexible_coupler_motor" uid="Flexible_coupler_motor*:*Default" version="338">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Flexible_coupler_motor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.032848162245534662</Mass>
+<CenterOfMass>0.0069999205650622112 -1.9094024297924204e-05 -0.00010446418016286182</CenterOfMass>
+<Inertia>2.8200523672838924e-06 3.9267841777025104e-06 3.9319990750742923e-06 -7.754529414681299e-09 2.4957414821288092e-11 -7.3224831966508726e-09</Inertia>
+</MassProperties>
+<GeometryFile name="Flexible_coupler_motor_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Pendulum" uid="Pendulum*:*Default" version="744">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Pendulum.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.007113885748818485</Mass>
+<CenterOfMass>-8.1264048914978312e-08 -0.021860294018889288 0.00078939362763541217</CenterOfMass>
+<Inertia>5.2776879857556502e-06 1.810625645094663e-07 5.2777409149479352e-06 -1.2280932042435299e-07 -1.9383697913233344e-12 -1.2201128507513358e-11</Inertia>
+</MassProperties>
+<GeometryFile name="Pendulum_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Rigid_coupler_pendulum" uid="Rigid_coupler_pendulum*:*Default" version="338">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Rigid_coupler_pendulum.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.064849999999999991</Mass>
+<CenterOfMass>0.0069999205650622112 -1.9094024297924204e-05 -0.00010446418016286182</CenterOfMass>
+<Inertia>5.567446807263043e-06 7.7523957663301182e-06 7.7626912005779218e-06 -1.5309265364166397e-08 4.927180823884745e-11 -1.4456304488308513e-08</Inertia>
+</MassProperties>
+<GeometryFile name="Rigid_coupler_pendulum_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="arm_v2" uid="arm_v2*:*Default" version="162">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="arm_v2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.041960570804928661</Mass>
+<CenterOfMass>-0.027323268405258956 0.0103851561276453 1.2857818036776521e-08</CenterOfMass>
+<Inertia>1.3828328289329063e-05 3.6307435492144201e-05 3.7943893182224097e-05 1.4123514385996784e-12 -1.68441072045594e-11 6.4321752752699081e-06</Inertia>
+</MassProperties>
+<GeometryFile name="arm_v2_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="base_plate" uid="base_plate*:*Default" version="124">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="base_plate.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.22846016033183092</Mass>
+<CenterOfMass>-0.1384205649544839 0.0030000000000000001 8.4605030418397403e-16</CenterOfMass>
+<Inertia>0.00052350713874135021 0.002399980819983208 0.001877844442203848 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_plate_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="dcMotor_plate" uid="dcMotor_plate*:*Default" version="152">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="dcMotor_plate.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.026006496685497728</Mass>
+<CenterOfMass>0 0.0015 0.0014534829683956444</CenterOfMass>
+<Inertia>2.0503595796879944e-05 4.0915044569147598e-05 2.0450458517295894e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="dcMotor_plate_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="orange_encoder_600ppr v1" uid="orange_encoder_600ppr v1*:*Default" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="orange_encoder_600ppr v1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.15546000000000001</Mass>
+<CenterOfMass>-0.00012140172622638438 -7.5171961470254261e-07 0.01841088675993335</CenterOfMass>
+<Inertia>3.1745756494210572e-05 3.2194898052031655e-05 2.7281986478604961e-05 4.2568241088518292e-09 -1.573694846219302e-07 1.4469470012794402e-10</Inertia>
+</MassProperties>
+<GeometryFile name="orange_encoder_600ppr v1_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
